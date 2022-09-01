@@ -34,7 +34,7 @@ public class RespostaController {
         return ResponseEntity.ok(service.cadastrar(resposta));
     }
     @PutMapping(path = "/resposta/{id}")
-    public ResponseEntity<RespostaModel> alterarResposta(@PathVariable RespostaModel resposta){
+    public ResponseEntity<RespostaModel> alterarResposta(@RequestBody RespostaModel resposta){
         return ResponseEntity.ok(service.alterar(resposta));
     }
     @DeleteMapping(path = "/resposta/{id}")

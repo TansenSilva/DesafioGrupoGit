@@ -1,6 +1,6 @@
 package com.desafioGrupoGit.Git.model;
 
-import ch.qos.logback.core.status.Status;
+import com.desafioGrupoGit.Git.model.Enum.StatusTopico;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -28,6 +28,6 @@ public class RespostaModel {
     private Boolean solucao = false;
     @Column
     @Enumerated(value = EnumType.STRING)
-    private Status status;
+    private StatusTopico status;
 
 }
