@@ -19,13 +19,17 @@ public class RespostaModel {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long Id;
-    @Column
+    private Long id;
+
+    @Column(nullable = false)
     private String mensagem;
-    @Column
+
+    @Column(nullable = false)
     private LocalDate dataCriacao;
+
     @Column
     private Boolean solucao = false;
+
     @Column
     @Enumerated(value = EnumType.STRING)
     private StatusTopico status;
