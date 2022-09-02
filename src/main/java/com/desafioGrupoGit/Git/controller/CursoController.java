@@ -33,7 +33,7 @@ public class CursoController {
 
     @GetMapping(path = "/cursos/categorias/{caterogias}")
     public List<CursoModel> buscaPorCategoria(@PathVariable Categorias categorias){
-        return
+        return service.buscarPorCategoria(categorias);
     }
 
 

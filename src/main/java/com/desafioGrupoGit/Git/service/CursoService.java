@@ -17,19 +17,20 @@ public class CursoService {
 
     private ICursoRepository repository;
 
-    public List<CursoModel> buscarCursos(){
+    public List<CursoModel> buscarCursos() {
         return repository.findAll();
     }
 
-    public Optional<CursoModel> buscarCursoPorId(Long idCurso){
+    public Optional<CursoModel> buscarCursoPorId(Long idCurso) {
         return repository.findById(idCurso);
     }
 
-    public CursoModel cadastrarCurso (CursoModel curso){
+    public CursoModel cadastrarCurso(CursoModel curso) {
         return repository.save(curso);
     }
 
-    public List<CursoModel> buscarPorCategoria (Categorias categorias){
+    public List<CursoModel> buscarPorCategoria(Categorias categorias) {
         return repository.findByCategoria(categorias);
 
+    }
 }
